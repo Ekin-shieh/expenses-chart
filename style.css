@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    font-family: 'DM Sans', sans-serif;
+    background-color: hsl(26, 66%, 93%);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.05em;
+
+    .top-box {
+        color: white;
+        height: 120px;
+        width: 540px;
+        background-color: hsl(10, 79%, 65%);
+        border-radius: 15px;
+        margin-bottom: 20px;
+        padding: 2.5%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            font-weight: 400;
+            font-size: 15px;
+            margin: 0 0 10% 0;
+        }
+    }
+
+    .bottom-box {
+        color: hsl(28, 10%, 53%);
+        height: 500px;
+        width: 540px;
+        background-color: whitesmoke;
+        border-radius: 15px;
+        padding: 2.5%;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 17px;
+
+        .title {
+            color: hsl(28, 10%, 30%);
+            font-weight: 800;
+            font-size: 30px;
+        }
+
+        .chart {
+            height: 60%;
+        }
+
+        .count {
+            padding-top: 8%;
+            border-top: 3px hsl(26, 66%, 93%) solid;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .rate-box {
+                text-align: right;
+            }
+        }
+    }
+
+    #balance {
+        font-weight: 800;
+        font-size: 30px;
+    }
+
+    #total {
+        font-weight: 800;
+        font-size: 50px;
+        color: hsl(28, 10%, 30%);
+    }
+
+    #rate {
+        font-weight: 800;
+        color: hsl(28, 10%, 30%);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        width: 375px;
+
+        .top-box {
+            width: 340px;
+            height: 100px;
+            padding: 5%;
+
+            .title {
+                font-weight: 200;
+                margin: 0 0 5% 0;
+            }
+        }
+
+        .bottom-box {
+            width: 340px;
+            height: 420px;
+            padding: 7% 5%;
+            font-size: 15px;
+
+            .title {
+                font-size: 24px;
+            }
+
+            .chart {
+                height: 65%;
+            }
+        }
+
+        #balance {
+            font-size: 24px;
+        }
+
+        #total {
+            margin-top: 5px;
+            font-size: 32px;
+        }
+
+        #rate {
+            margin-bottom: 5px;
+        }
+    }
+}
