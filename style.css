@@ -50,10 +50,6 @@ body {
             font-size: 30px;
         }
 
-        .chart {
-            height: 60%;
-        }
-
         .count {
             padding-top: 8%;
             border-top: 3px hsl(26, 66%, 93%) solid;
@@ -65,6 +61,54 @@ body {
                 text-align: right;
             }
         }
+    }
+
+    .chart {
+        height: 60%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .bar-group {
+        display: grid;
+        grid-template-rows: auto auto;
+        justify-items: center;
+    }
+
+    .value {
+        background-color: hsl(28, 10%, 30%);
+        color: white;
+        margin-bottom: 5px;
+        font-size: 12px;
+        border-radius: 2px;
+        width: 50px;
+        text-align: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s;
+    }
+
+    .bar {
+        width: 50px;
+        background-color: hsl(10, 79%, 65%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+    .highlight {
+        background-color: hsl(186, 34%, 65%) !important;
+    }
+
+    .bar-group:hover .value {
+        opacity: 1;
+    }
+
+    .label {
+        margin: 8px 0px 20px 0;
+        font-size: 12px;
     }
 
     #balance {
@@ -112,6 +156,15 @@ body {
             .chart {
                 height: 65%;
             }
+        }
+
+        .value {
+            font-size: 8px;
+            width: 35px;
+        }
+
+        .bar {
+            width: 35px;
         }
 
         #balance {
